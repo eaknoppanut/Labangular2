@@ -22,8 +22,10 @@ const appRoutes:Routes = [
   {path: 'home',canActivate: [AuthguardGuard],component: HomeComponent},
   {path: 'user',canActivate: [AuthguardGuard],component: UserComponent},
   {path: 'aboutus',canActivate: [AuthguardGuard],component: AboutusComponent},
-  {path: 'user-management',canActivate: [AuthguardGuard],component: UserManagementComponent}
+  {path: 'user-management',canActivate: [AuthguardGuard],component: UserManagementComponent},
+  {path: '**',canActivate: [AuthguardGuard],component: LoginComponent}
 ]
+
 
 @NgModule({
   declarations: [
